@@ -1,92 +1,99 @@
-# JavaScript Exercises
+## JavaScript Exercises
 
+# 1. Write a function with 2 input parameters (each parameter is an array). This function returns an array of the same elements in two arrays;
 
+Example: 	array1 = [1,2,3,4,5,6];
+			array2 = [3,4,8,9,12];
+			=> [3,4]
 
-## Getting started
+# 2. Find 2 elements with the greatest sum in an array
+Example: [1,7,9,2,5,3,8] => [9.8]
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+# 3. Find pairs of elements whose sum is equal to a given number
+Example: [1,7,9,2,5,3,8], sum = 10 => [1,9] ; [7,3]; [2,8]
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+# 4. Get a new array from the given array so that the elements appear only once (using Set)
+Example: [1,2,3,1,2,3,4,5,6,4] => [1,2,3,4,5,6]
 
-## Add your files
+# 5. Get a new array of duplicate elements in 2 arrays, each element appears exactly once in the new array
+Example: 	const arr1 = [1, 2, 3, 4, 5, 6, 7, 9, 9, 8, 7, 7];
+			const arr2 = [3, 5, 9, 10, 88];
+			=> [3,5,9]
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+# 6. Given an array arr1. Write a function that returns a new array of the elements that appear more than once in arr1. The elements in new array can only appear once in this array.
+Example: 	const arr1 = [1,2,3,4,2,3,5,3,1,1,5,2,3];
+		const myFunc = (inputArr) => {
+			// write your code here
+		}
+		const arr2 = myFunc(arr1); // [2,3,1,5]
+			
+# 7. 	I have an array: ['face', 'zalo', 'face', 'gmail', 'zalo', 'zalo']
+	Write a function with 1 input parameter, an return a new object like this:
+	{'face': 2, 'zalo': 3, 'gmail':1} // 2,3,1 are the number of occurrences of 'face', 'zalo',
+	 'gmail' in the array
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/vnhminh12082000/javascript-exercises.git
-git branch -M main
-git push -uf origin main
-```
+Example: 		const myArr = ['face', 'zalo', 'face', 'gmail', 'zalo', 'zalo']
+			const myFunc = (inputArr) => {
+				//write somthing here
+			}
+			console.log(myFunc(myArr)) // {'face': 2, 'zalo': 3, 'gmail':1}
 
-## Integrate with your tools
+# 8. 	I have an array like this: 
+const arr1 = [
+    { make: 'audi', model: 'r8', year: '2012' }, 
+    { make: 'audi', model: 'rs5', year: '2013' }, 
+    { make: 'ford', model: 'mustang', year: '2012' }, 
+    { make: 'ford', model: 'fusion', year: '2015' }, 
+    { make: 'kia', model: 'optima', year: '2012' }]
+	Please write a function has 2 input parameters, 1st param is an array like above array, 2nd param is the name of any property in each object of the array.
+	Use example: myFunc('make', arr1);
+	That will return a new object like this (each property is an array, this array includes objects correspond of that property):
+	{
+		"audi": [
+			{
+			"make": "audi",
+			"model": "r8",
+			"year": "2012"
+			},
+			{
+			  "make": "audi",
+			  "model": "rs5",
+			  "year": "2013"
+			}
+		], 
+		"ford": [
+			{
+			  "make": "ford",
+			  "model": "mustang",
+			  "year": "2012"
+			},
+			{
+			  "make": "ford",
+			  "model": "fusion",
+			  "year": "2015"
+			}
+		],
+		"kia": [
+			{
+			  "make": "kia",
+			  "model": "optima",
+			  "year": "2012"
+			}
+		]
+	}
 
-- [ ] [Set up project integrations](https://gitlab.com/vnhminh12082000/javascript-exercises/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+# 9. I have 1 object like this: 
+		const order = {
+			'cart': [
+				{ id: 1, name: "ao dai", amount: 5, price: 100000 },
+				{ id: 2, name: "ao coc", amount: 2, price: 200000 },
+				{ id: 3, name: "quan dai", amount: 3, price: 150000 },
+				{ id: 4, name: "quan coc", amount: 4, price: 130000 },
+			],
+			'customer': 'Name',
+			'address': '12 Giai Phong Street'
+		};
+	Please use only reduce method, and only one time, and return 2 variables: totalOfMoney = 1870000, totalOfAmount = 14;
+	
+# 10. Write 3 methods myMap, myFilter, myReduce (suggest: user Array.prototype, "this" keyword, and for loop).
+	3 these methods have similar in use and usage as map, filter, reduce of array in JS 
